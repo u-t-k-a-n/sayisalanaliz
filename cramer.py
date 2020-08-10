@@ -36,7 +36,7 @@ for i in range(mertebe):
 def üst_üçgen_matris(matrix,mertebe):
     for i in range(mertebe-1):
         for j in range(i+1,mertebe):
-            if matris[i][i]==0:
+            if matrix[i][i]==0:
                 matrix[i][i]=10**-18
             sayı=matrix[j][i]/matrix[i][i]
             for k in range(mertebe):
