@@ -37,7 +37,9 @@ def üst_üçgen_matris(matrix,mertebe):
     for i in range(mertebe-1):
         for j in range(i+1,mertebe):
             if matrix[i][i]==0:
-                matrix[i][i]=10**-18
+                matrix[i][:],matrix[i+1][:]=matrix[i+1][:],matrix[i][:]
+                for k in range(mertebe):
+                    matrix[i][k]*=-1
             sayı=matrix[j][i]/matrix[i][i]
             for k in range(mertebe):
                 matrix[j][k]-=sayı*matrix[i][k]
